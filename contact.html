@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微品咖啡 Wipcafe</title>
+    <link rel="shortcut icon" href="image/wip.ico">
+    <!-- swiper 輪播 -->
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <!-- fancybox 照片放大 -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/all.css">
+    
+    
+</head>
+<body>
+    <!-- scroll-to-top -->
+    <div class="scroll-to-top">
+        <img src="image/top-icon.svg" alt="">
+    </div>
+    <!-- header -->
+    <header class="contact-lock-box">
+        <noscript>請升級您的瀏覽器以便預覽此網站</noscript>
+    </header>
+    <!-- pages-banner -->
+    <section class="pages-banner">
+        
+        <div class="tag-title">
+            <div class="tag-inner tag-inner-w">
+                <p>聯絡我們<br><span>Contact</span></p>
+            </div>
+        </div>
+    </section>
+    <!-- contact-content -->
+    <section class="contact-box">
+
+        <div class="wrapper">
+            <div class="contact-content">
+                <img class="right" src="image/shop.jpg" alt="" >
+                <p>
+                為提供更美好的微品體驗，<br>歡迎您使用下方表單填寫訂位/建議，我們將盡快處理。<br>
+                或您可直接撥打電話<span>&ensp;02-000000000</span><br>服務時間:週二至週日( 週一公休 )<br>上午09:30~12:30 及 下午13:30~18:30
+                </p>
+            </div>
+            <div class="contact-form">
+                <h3>留言</h3>
+                <form action="#" method="POST" id="form-confirm">
+                    <div class="form-w50 form-w50-w100">
+                        <label><p>姓名&ensp;<span>*</span></p><input type="text" maxlength="20" name="name">
+                        </label>
+                    </div>
+                    <div class="form-w50 form-w50-w100">
+                            <label><p>電話&ensp;<span>*</span></p><input type="tel" maxlength="12" name="tel">
+                            </label>
+                    </div>
+                    <div class="form-w50 form-w50-w100">
+                            <label><p>信箱</p><input type="email">
+                            </label>
+                    </div>
+                    <div class="form-w50 form-w50-w100">
+                        <label><p>類型</p>
+                        <select>
+                            <option value selected="selected">請選擇</option>
+                            <option value="預約訂位">預約訂位</option>
+                            <option value="訂購飲品">訂購飲品</option>
+                            <option value="意見回饋">意見回饋</option>
+                            <option value="其他">其他</option>
+                        </select>
+                        </label>
+                    </div>
+                    <div class="form-w100"> 
+                        <label>
+                                <p>詢問事項&ensp;<span>*</span></p>
+                                <textarea name="ask" placeholder="1.預約訂位：請填寫訂位日期/時間/人數&#13;&#10;2.訂購飲品：請填寫訂位日期/時間/商品名稱/杯數&#13;&#10;我們會盡快與您聯絡"></textarea>
+                        </label>
+                    </div>
+                    <div class="button-Send">
+                        <input type="submit" value="送出">
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <ul class="shop">
+                <li class="logo logo-footer"><a href="#">Wipcafe</a></li>
+                <li>
+                    <p>00000台北市大安區大大路大段0號<br>9 : 00 am - 10 : 00 pm （週一公休<br>02-000000000</p>
+                </li>
+                <li class="link">
+                    <ul>
+                        <li><a href="#"><img src="image/fb.png" alt=""></a></li>
+                        <li><a href="#"><img src="image/line.png" alt=""></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navcopy-footer">
+                <li class="nav-menu nav-footer">
+                    <ul>
+                        <li><a href="#">最新消息</a></li>
+                        <li><a href="#">商品專區</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                    </ul>
+                </li>
+                <li><p>Copyright © 2018 wipcafe . All rights reserved</p></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+    
+    <!-- js載入 -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Swiper js 輪播 -->
+    <script src="js/swiper.min.js"></script>
+    <!-- fancybox 照片放大 -->
+    <script type="text/javascript" src='js/jquery.fancybox.min.js'></script>
+    <!-- 重點填寫出現 js -->
+    <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js'></script>
+    <!-- all js -->
+    <script src="js/all.js"></script>
+    <script>
+        // contact-error
+        $(function () {
+            // validate
+            $("#form-confirm").validate({
+                // error 執行
+                rules: {
+                    name: "required",
+                    tel: "required",
+                    ask: "required"
+                },
+                //error messages
+                messages: {
+                    name: "* 請填寫您的姓名",
+                    tel: "* 請填寫您的聯絡電話",
+                    ask: "* 請填寫詢問事項"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
